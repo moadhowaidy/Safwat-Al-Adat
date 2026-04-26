@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-bone text-brand-charcoal antialiased;
+  }
+  
+  html[lang="ar"] {
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4, html[lang="ar"] h5, html[lang="ar"] h6 {
+    font-family: 'Amiri', serif;
+  }
+  
+  html[lang="en"] {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3, html[lang="en"] h4, html[lang="en"] h5, html[lang="en"] h6 {
+    font-family: '"Playfair Display"', serif;
+  }
+}
+
+@layer utilities {
+  .clip-circle {
+    clip-path: circle(var(--clip-radius, 0%) at var(--clip-x, 50%) var(--clip-y, 50%));
+  }
+}
