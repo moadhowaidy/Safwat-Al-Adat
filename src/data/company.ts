@@ -6,7 +6,7 @@ export const COMPANY = {
   phoneNumberDisplay: '+218 93-000-6160',
 
   // Email
-  email: 'info@safwatadat.ly',
+  email: 'info@safwatadat.com',
 
   // @deprecated — use COMPANY.location instead
   country: { en: 'Libya', ar: 'ليبيا' },
