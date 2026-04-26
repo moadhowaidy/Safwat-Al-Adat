@@ -90,6 +90,17 @@ export default function Footer() {
               : 'الصور لأغراض التوضيح. قد يختلف شكل المنتج الفعلي حسب المورّد والشحنة.'}
           </p>
           <p>© {year} {i18n.language === 'ar' ? 'صفوة العادات لاستيراد المواد الغذائية. جميع الحقوق محفوظة.' : 'Safwat Al-Adat for Food Products Import. All rights reserved.'}</p>
+          <p style={{ marginTop: '6px', fontSize: '0.72rem', letterSpacing: '0.03em', opacity: 0.6 }}>
+            Powered by{' '}
+            <a
+              href="https://swiftscaled.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#8B0000', textDecoration: 'none', fontWeight: 600 }}
+            >
+              SWIFTSCAL
+            </a>
+          </p>
         </div>
       </Container>
     </footer>
