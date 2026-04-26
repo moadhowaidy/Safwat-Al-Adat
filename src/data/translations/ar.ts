@@ -78,6 +78,13 @@ export default {
       message: 'الرسالة',
       submit: 'إرسال عبر واتساب'
     },
-    detailsTitle: 'معلومات التواصل'
+    detailsTitle: 'معلومات التواصل',
+    addressLabel: 'زورونا',
+    fullAddress: 'ترهونة، محافظة المرقب، ليبيا',
+    getDirections: 'احصل على الاتجاهات',
+    openInGoogleMaps: 'افتح في خرائط جوجل',
+    openInWaze: 'افتح في Waze',
+    openInAppleMaps: 'افتح في خرائط آبل',
+    mapAriaLabel: 'خريطة توضح موقع صفوة العادات في ترهونة، ليبيا',
   }
 };

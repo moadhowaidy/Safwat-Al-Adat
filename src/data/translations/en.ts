@@ -78,6 +78,13 @@ Whether you operate a supermarket chain, a hotel kitchen, a restaurant group, or
       message: 'Message',
       submit: 'Send via WhatsApp'
     },
-    detailsTitle: 'Get in touch'
+    detailsTitle: 'Get in touch',
+    addressLabel: 'Visit us',
+    fullAddress: 'Tarhuna, Murqub District, Libya',
+    getDirections: 'Get directions',
+    openInGoogleMaps: 'Open in Google Maps',
+    openInWaze: 'Open in Waze',
+    openInAppleMaps: 'Open in Apple Maps',
+    mapAriaLabel: 'Map showing the location of Safwat Al-Adat in Tarhuna, Libya',
   }
 };

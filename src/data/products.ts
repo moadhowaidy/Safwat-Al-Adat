@@ -9,67 +9,40 @@ export interface Product {
 }
 
 export const PRODUCTS: Product[] = [
-  // Canned Goods
-  {
-    id: 'canned-tuna',
-    category: 'canned',
-    name: { en: 'Canned tuna', ar: 'تونة معلّبة' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Canned+Tuna'
-  },
-  {
-    id: 'canned-sardines',
-    category: 'canned',
+  // CANNED
+  { id: 'canned-tuna',     category: 'canned',  
+    name: { en: 'Canned tuna',     ar: 'تونة معلّبة' },
+    imageUrl: '/products/canned-tuna.jpg' },
+  { id: 'canned-sardines', category: 'canned',  
     name: { en: 'Canned sardines', ar: 'سردين معلّب' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Canned+Sardines'
-  },
+    imageUrl: '/products/canned-sardines.jpg' },
 
-  // Frozen Meat
-  {
-    id: 'frozen-beef',
-    category: 'meat',
-    name: { en: 'Frozen beef', ar: 'لحم بقر مجمّد' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Frozen+Beef'
-  },
-  {
-    id: 'frozen-lamb',
-    category: 'meat',
+  // MEAT
+  { id: 'frozen-beef',  category: 'meat',  
+    name: { en: 'Frozen beef',          ar: 'لحم بقر مجمّد' },
+    imageUrl: '/products/frozen-beef.jpg' },
+  { id: 'frozen-lamb',  category: 'meat',  
     name: { en: 'Frozen lamb / mutton', ar: 'لحم ضأن مجمّد' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Frozen+Lamb'
-  },
+    imageUrl: '/products/frozen-lamb.jpg' },
 
-  // Frozen Poultry
-  {
-    id: 'frozen-chicken-whole',
-    category: 'poultry',
-    name: { en: 'Whole frozen chicken', ar: 'دجاج كامل مجمّد' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Whole+Chicken'
-  },
-  {
-    id: 'frozen-chicken-breast',
-    category: 'poultry',
-    name: { en: 'Chicken breasts', ar: 'صدور دجاج' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Chicken+Breasts'
-  },
-  {
-    id: 'frozen-chicken-leg',
-    category: 'poultry',
+  // POULTRY
+  { id: 'whole-chicken',     category: 'poultry',  
+    name: { en: 'Whole frozen chicken',  ar: 'دجاج كامل مجمّد' },
+    imageUrl: '/products/whole-chicken.jpg' },
+  { id: 'chicken-breasts',   category: 'poultry',  
+    name: { en: 'Chicken breasts',       ar: 'صدور دجاج' },
+    imageUrl: '/products/chicken-breasts.jpg' },
+  { id: 'chicken-legs',      category: 'poultry',  
     name: { en: 'Chicken legs / thighs', ar: 'أفخاذ دجاج' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Chicken+Legs'
-  },
-  {
-    id: 'frozen-chicken-wing',
-    category: 'poultry',
-    name: { en: 'Chicken wings', ar: 'أجنحة دجاج' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Chicken+Wings'
-  },
+    imageUrl: '/products/chicken-legs.jpg' },
+  { id: 'chicken-wings',     category: 'poultry',  
+    name: { en: 'Chicken wings',         ar: 'أجنحة دجاج' },
+    imageUrl: '/products/chicken-wings.jpg' },
 
-  // Frozen Seafood
-  {
-    id: 'frozen-seafood-fish',
-    category: 'seafood',
+  // SEAFOOD
+  { id: 'frozen-fish', category: 'seafood',  
     name: { en: 'Frozen fish — all varieties', ar: 'أسماك مجمّدة بجميع أنواعها' },
-    imageUrl: 'https://placehold.co/600x400/FAF7F0/C9A227?text=Frozen+Fish'
-  }
+    imageUrl: '/products/frozen-fish.jpg' },
 ];
 
 export const CATEGORIES = [

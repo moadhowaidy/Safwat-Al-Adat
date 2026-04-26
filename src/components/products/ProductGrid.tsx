@@ -22,11 +22,11 @@ export default function ProductGrid({ products }: ProductGridProps) {
           transition={{ duration: 0.4, delay: (idx % 4) * 0.1 }}
           className="bg-brand-white border border-brand-border rounded-sm overflow-hidden hover:shadow-md transition-shadow group flex flex-col"
         >
-          <div className="aspect-[4/3] bg-brand-bone relative overflow-hidden">
+          <div className="aspect-[4/3] bg-brand-bone relative overflow-hidden border-b border-brand-border">
             {product.imageUrl ? (
               <img 
                 src={product.imageUrl} 
-                alt={product.name[lang]} 
+                alt={`${product.name.en} | ${product.name.ar}`} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : (

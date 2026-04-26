@@ -65,8 +65,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="text-brand-gold shrink-0 mt-1" size={20} />
                 <span className="text-brand-bone">
-                  {COMPANY.country[i18n.language as 'en' | 'ar']}
-                  {/* TODO: confirm street address */}
+                  {COMPANY.location.fullAddress[i18n.language as 'en' | 'ar']}
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -85,6 +84,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-brand-charcoal/50 text-center text-brand-taupe text-sm">
+          <p className="mb-2 italic">
+            {i18n.language === 'en' 
+              ? 'Product images are illustrative. Actual product appearance may vary by supplier and shipment.' 
+              : 'الصور لأغراض التوضيح. قد يختلف شكل المنتج الفعلي حسب المورّد والشحنة.'}
+          </p>
           <p>© {year} {i18n.language === 'ar' ? 'صفوة العادات لاستيراد المواد الغذائية. جميع الحقوق محفوظة.' : 'Safwat Al-Adat for Food Products Import. All rights reserved.'}</p>
         </div>
       </Container>

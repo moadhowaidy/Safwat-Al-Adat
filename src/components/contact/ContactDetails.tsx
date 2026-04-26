@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageCircle, Navigation, ExternalLink } from 'lucide-react';
 import { COMPANY } from '../../data';
 
 export default function ContactDetails() {
@@ -50,13 +50,62 @@ export default function ContactDetails() {
         <div className="flex items-start gap-4">
           <MapPin className="text-brand-gold shrink-0 mt-1" size={24} />
           <div>
-            <h3 className="font-semibold text-lg mb-1">{lang === 'ar' ? 'العنوان' : 'Address'}</h3>
+            <h3 className="font-semibold text-lg mb-1">{t('contact.addressLabel')}</h3>
             <p className="text-brand-taupe">
-              {COMPANY.country[lang]}
-              {/* TODO: add street address here when confirmed */}
+              {COMPANY.location.fullAddress[lang]}
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Embedded map */}
+      <div className="mt-8">
+        <div className="rounded-lg overflow-hidden border border-brand-bone/20 shadow-sm">
+          <iframe
+            src={COMPANY.location.googleMapsEmbedUrl}
+            title={t('contact.mapAriaLabel')}
+            aria-label={t('contact.mapAriaLabel')}
+            width="100%"
+            height="320"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
+      </div>
+
+      {/* Directions buttons */}
+      <div className="mt-4 flex flex-wrap gap-2">
+        <a
+          href={COMPANY.location.googleMapsDirectionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-brand-gold text-brand-charcoal rounded-md text-sm font-medium hover:bg-brand-goldHover transition-colors"
+        >
+          <Navigation className="h-4 w-4 shrink-0" />
+          {t('contact.openInGoogleMaps')}
+        </a>
+
+        <a
+          href={COMPANY.location.wazeDirectionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 border border-brand-olive text-brand-bone rounded-md text-sm font-medium hover:bg-brand-olive transition-colors"
+        >
+          <ExternalLink className="h-4 w-4 shrink-0" />
+          {t('contact.openInWaze')}
+        </a>
+
+        <a
+          href={COMPANY.location.appleMapsDirectionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 border border-brand-olive text-brand-bone rounded-md text-sm font-medium hover:bg-brand-olive transition-colors"
+        >
+          <ExternalLink className="h-4 w-4 shrink-0" />
+          {t('contact.openInAppleMaps')}
+        </a>
       </div>
     </div>
   );

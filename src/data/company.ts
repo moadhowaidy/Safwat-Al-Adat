@@ -8,9 +8,38 @@ export const COMPANY = {
   // Email
   email: 'info@safwatadat.ly',
 
-  // Location
+  // @deprecated — use COMPANY.location instead
   country: { en: 'Libya', ar: 'ليبيا' },
-  address: { en: '', ar: '' }, // TODO: confirm street address
+  // @deprecated — use COMPANY.location.fullAddress instead
+  address: { en: 'Tarhuna, Murqub District, Libya', ar: 'ترهونة، محافظة المرقب، ليبيا' },
+
+  // Location — confirmed Tarhuna, Libya
+  location: {
+    coordinates: {
+      lat: 32.437498,
+      lng: 13.625666,
+    },
+    city:     { en: 'Tarhuna',         ar: 'ترهونة'          },
+    district: { en: 'Murqub District', ar: 'محافظة المرقب'   },
+    country:  { en: 'Libya',           ar: 'ليبيا'           },
+
+    // Full display address — used in the contact page and footer
+    fullAddress: {
+      en: 'Tarhuna, Murqub District, Libya',
+      ar: 'ترهونة، محافظة المرقب، ليبيا',
+    },
+
+    // Pre-built deep links — no API keys required
+    // Embed: works inside a sandboxed iframe with no API key
+    googleMapsEmbedUrl:
+      'https://www.google.com/maps?q=32.437498,13.625666&hl=ar&z=15&output=embed',
+
+    // Open the location in the user's preferred map app
+    googleMapsShortUrl:      'https://maps.app.goo.gl/Cc7KH4crJuXeHwCh8',
+    googleMapsDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=32.437498,13.625666',
+    wazeDirectionsUrl:       'https://www.waze.com/ul?ll=32.437498,13.625666&navigate=yes',
+    appleMapsDirectionsUrl:  'https://maps.apple.com/?daddr=32.437498,13.625666',
+  },
 
   // History
   establishedDate: '2025-02-23',
